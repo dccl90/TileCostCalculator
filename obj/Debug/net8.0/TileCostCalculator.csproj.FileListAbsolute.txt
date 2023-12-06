@@ -1,0 +1,14 @@
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/bin/Debug/net8.0/TileCostCalculator
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/bin/Debug/net8.0/TileCostCalculator.deps.json
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/bin/Debug/net8.0/TileCostCalculator.runtimeconfig.json
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/bin/Debug/net8.0/TileCostCalculator.dll
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/bin/Debug/net8.0/TileCostCalculator.pdb
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/TileCostCalculator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/TileCostCalculator.AssemblyInfoInputs.cache
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/TileCostCalculator.AssemblyInfo.cs
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/TileCostCalculator.csproj.CoreCompileInputs.cache
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/TileCostCalculator.dll
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/refint/TileCostCalculator.dll
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/TileCostCalculator.pdb
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/TileCostCalculator.genruntimeconfig.cache
+/Users/dclarke/Documents/study/rakete/module-one/TileCostCalculator/obj/Debug/net8.0/ref/TileCostCalculator.dll
