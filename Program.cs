@@ -7,7 +7,7 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
         static void Main(string[] args)
         {
            
-            double LABOUR_RATE = 86.00;
+            const double LABOUR_RATE = 86.00;
             double flooringCost;
             double labourCost;
             string costPerUnit = "";
