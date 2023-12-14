@@ -8,49 +8,50 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
         {
            
             const double LABOUR_RATE = 86.00;
+            const int SQUARE_METERS_PER_HOUR = 20;
+            double area = 0;
             double flooringCost;
             double labourCost;
-            string costPerUnit = "";
-            double area = 0;
-        
+            double costPerUnit;
+            double length;
+            double width;
+            int shape;
+
             Console.WriteLine("**** Tile Cost Calculator ****");
             Console.Write("Enter 1 for a Rectangle Room or 2 for a Triangle Room: ");
-            string roomShape = Console.ReadLine();
+            shape = Convert.ToInt32(Console.ReadLine());
 
-            if(roomShape != "1" && roomShape != "2")
+            if(shape < 1 | shape > 2)
             {
-                Console.Write("Invalid Input");
+                Console.WriteLine("Invalid Shape");
                 return;
-            }
+            } 
 
             Console.Write("Please enter the length of the room in feet: ");
-            string length = Console.ReadLine();
+            length = Convert.ToDouble(Console.ReadLine());
             Console.Write("Please enter the width of the room in feet: ");
-            string width = Console.ReadLine();
+            width = Convert.ToDouble(Console.ReadLine());
             Console.Write("Please enter the cost per square foot: ");
+            costPerUnit = Convert.ToDouble(Console.ReadLine());
 
-            if(roomShape == "1")
+            if(shape == 1)
             {
-                costPerUnit = Console.ReadLine();
-                area = Double.Parse(length) * Double.Parse(width);
+                area = length * width;
             }
 
-            if(roomShape == "2")
-            {
-                costPerUnit = Console.ReadLine();
-                //Length is equivalent to base and width is equivalent to height
-                area = 0.5 * (Double.Parse(length) * Double.Parse(width));
+            if(shape == 2)
+            {  
+                area = 0.5 * (length * width);
             }
 
-            labourCost = area / 20 * LABOUR_RATE;
-            flooringCost = area * Double.Parse(costPerUnit);
+            labourCost = area / SQUARE_METERS_PER_HOUR * LABOUR_RATE;
+            flooringCost = area * costPerUnit;
             Console.WriteLine("----------------------------------");   
             Console.WriteLine($"Room Area: {area} sq ft");
             Console.WriteLine($"Flooring Cost: ${flooringCost}");
             Console.WriteLine($"Labour Cost: ${labourCost}");
             Console.WriteLine($"Total Cost: ${flooringCost + labourCost}");
             Console.Write("----------------------------------");    
-
         }
     }
 }
