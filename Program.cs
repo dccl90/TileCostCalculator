@@ -18,13 +18,14 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
             Console.WriteLine("**** Tile Cost Calculator ****");
             Console.WriteLine("Enter 1 for a Rectangle Room");
             Console.WriteLine("Enter 2 for a Triangle Room");
+            Console.WriteLine("Enter 3 for a Circle Room");
             Console.Write(": ");
 
             shape = Convert.ToInt32(Console.ReadLine());
 
-            if(shape < 1 | shape > 2)
+            if(shape < 1 | shape > 3)
             {
-                Console.WriteLine("Invalid Shape");
+                Console.WriteLine("Invalid Input: Please enter 1, 2, or 3");
                 return;
             } 
 
@@ -46,8 +47,20 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
                 area = 0.5 * (triangleBase * height);
             }
 
+            if(shape == 3)
+            {  
+                Console.Write("Please enter the radius of the circle in feet: ");
+                double radius = Convert.ToDouble(Console.ReadLine());
+                area = (radius * radius) *  Math.PI;
+            }
+
             Console.Write("Please enter the cost per square foot: ");
             costPerUnit = Convert.ToDouble(Console.ReadLine());
+
+            if(costPerUnit < 0){
+                Console.WriteLine("Invalid Input: Cost per square foot cannot be a negative number");
+                return;
+            }
 
             labourCost = area / SQUARE_METERS_PER_HOUR * LABOUR_RATE;
             flooringCost = area * costPerUnit;
@@ -56,7 +69,9 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
             Console.WriteLine($"Flooring Cost: {flooringCost:C}");
             Console.WriteLine($"Labour Cost: {labourCost:C}");
             Console.WriteLine($"Total Cost: {flooringCost + labourCost:C}");
-            Console.Write("----------------------------------");    
+            Console.WriteLine("----------------------------------"); 
+            Console.WriteLine("Press Enter to Exit");
+            Console.ReadLine();   
         }
     }
 }
