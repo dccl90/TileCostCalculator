@@ -9,6 +9,9 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
            
             const double LABOUR_RATE = 86.00;
             const int SQUARE_METERS_PER_HOUR = 20;
+            const int USER_CHOICE_RECTANGLE = 1;
+            const int USER_CHOICE_TRIANGLE = 2;
+            const int USER_CHOICE_CIRCLE = 3;
             double area = 0;
             double flooringCost;
             double labourCost;
@@ -23,13 +26,13 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
 
             shape = Convert.ToInt32(Console.ReadLine());
 
-            if(shape < 1 | shape > 3)
+            if(shape < USER_CHOICE_RECTANGLE | shape > USER_CHOICE_CIRCLE)
             {
                 Console.WriteLine("Invalid Input: Please enter 1, 2, or 3");
                 return;
             } 
 
-            if(shape == 1)
+            if(shape == USER_CHOICE_RECTANGLE)
             {
                 Console.Write("Please enter the length of the rectangle in feet: ");
                 double length = Convert.ToDouble(Console.ReadLine());
@@ -38,7 +41,7 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
                 area = length * width;
             }
 
-            if(shape == 2)
+            if(shape == USER_CHOICE_TRIANGLE)
             {  
                 Console.Write("Please enter the base of the triangle in feet: ");
                 double triangleBase = Convert.ToDouble(Console.ReadLine());
@@ -47,7 +50,7 @@ namespace TileCostCalculator // Note: actual namespace depends on the project na
                 area = 0.5 * (triangleBase * height);
             }
 
-            if(shape == 3)
+            if(shape == USER_CHOICE_CIRCLE)
             {  
                 Console.Write("Please enter the radius of the circle in feet: ");
                 double radius = Convert.ToDouble(Console.ReadLine());
